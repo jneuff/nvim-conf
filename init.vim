@@ -1,3 +1,4 @@
+" plugins
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -12,7 +13,6 @@ Plug 'bfredl/nvim-ipy'
 call plug#end()
 
 " basic settings
-
 syntax on
 filetype plugin indent on
 set encoding=utf-8
@@ -27,17 +27,17 @@ set ignorecase	" case insensitive
 set smartcase	" unless query contains capitals
 
 " Relative numbering
-Function! NumberToggle()
+function! NumberToggle()
   if(&relativenumber == 1)
     set nornu
     set number
   else
     set rnu
   endif
-Endfunc
+endfunc
 
 " Toggle between normal and relative numbering.
-Nnoremap <leader>r :call NumberToggle()<cr>
+nnoremap <leader>r :call NumberToggle()<cr>
 
 inoremap jj <ESC>
 let mapleader="\<Space>"
@@ -52,6 +52,7 @@ let g:airline#extensions#tabline#enabled = 1
 " ***
 set hidden
 
+" nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " ctrlp
