@@ -10,6 +10,8 @@ Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'bfredl/nvim-ipy'
 Plug 'rking/ag.vim'
+Plug 'ensime/ensime-vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
@@ -29,6 +31,9 @@ set expandtab		" tabs are spaces
 
 " for c
 autocmd Filetype c setlocal ts=2 sts=2 sw=2
+
+" for scala
+autocmd Filetype scala setlocal ts=2 sts=2 sw=2
 
 " search settings
 set incsearch	" incremental search
